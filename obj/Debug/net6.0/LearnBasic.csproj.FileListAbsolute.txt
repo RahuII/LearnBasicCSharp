@@ -1,0 +1,15 @@
+C:\Users\promact\Desktop\Rahul\DotNet\DotNet\LearnBasic\LearnBasic\LearnBasic\obj\Debug\net6.0\LearnBasic.csproj.AssemblyReference.cache
+C:\Users\promact\Desktop\Rahul\DotNet\DotNet\LearnBasic\LearnBasic\LearnBasic\obj\Debug\net6.0\LearnBasic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\promact\Desktop\Rahul\DotNet\DotNet\LearnBasic\LearnBasic\LearnBasic\obj\Debug\net6.0\LearnBasic.AssemblyInfoInputs.cache
+C:\Users\promact\Desktop\Rahul\DotNet\DotNet\LearnBasic\LearnBasic\LearnBasic\obj\Debug\net6.0\LearnBasic.AssemblyInfo.cs
+C:\Users\promact\Desktop\Rahul\DotNet\DotNet\LearnBasic\LearnBasic\LearnBasic\obj\Debug\net6.0\LearnBasic.csproj.CoreCompileInputs.cache
+C:\Users\promact\Desktop\Rahul\DotNet\DotNet\LearnBasic\LearnBasic\LearnBasic\bin\Debug\net6.0\LearnBasic.exe
+C:\Users\promact\Desktop\Rahul\DotNet\DotNet\LearnBasic\LearnBasic\LearnBasic\bin\Debug\net6.0\LearnBasic.deps.json
+C:\Users\promact\Desktop\Rahul\DotNet\DotNet\LearnBasic\LearnBasic\LearnBasic\bin\Debug\net6.0\LearnBasic.runtimeconfig.json
+C:\Users\promact\Desktop\Rahul\DotNet\DotNet\LearnBasic\LearnBasic\LearnBasic\bin\Debug\net6.0\LearnBasic.dll
+C:\Users\promact\Desktop\Rahul\DotNet\DotNet\LearnBasic\LearnBasic\LearnBasic\bin\Debug\net6.0\LearnBasic.pdb
+C:\Users\promact\Desktop\Rahul\DotNet\DotNet\LearnBasic\LearnBasic\LearnBasic\obj\Debug\net6.0\LearnBasic.dll
+C:\Users\promact\Desktop\Rahul\DotNet\DotNet\LearnBasic\LearnBasic\LearnBasic\obj\Debug\net6.0\refint\LearnBasic.dll
+C:\Users\promact\Desktop\Rahul\DotNet\DotNet\LearnBasic\LearnBasic\LearnBasic\obj\Debug\net6.0\LearnBasic.pdb
+C:\Users\promact\Desktop\Rahul\DotNet\DotNet\LearnBasic\LearnBasic\LearnBasic\obj\Debug\net6.0\LearnBasic.genruntimeconfig.cache
+C:\Users\promact\Desktop\Rahul\DotNet\DotNet\LearnBasic\LearnBasic\LearnBasic\obj\Debug\net6.0\ref\LearnBasic.dll
