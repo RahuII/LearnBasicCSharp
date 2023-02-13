@@ -1,40 +1,33 @@
-﻿using System;
-   public class Program
+﻿namespace LearnBasic
 {
-    static void Main(string[] args)
-    {
-        Employee[] employees = new Employee[3];
-        employees[0] = new Employee();
-        employees[1] = new PartTimeEmployee();
-        employees[2] = new FullTime();
 
-        foreach (Employee e in employees)
-        {
-            e.PrintFullName();
+
+
+    interface I1{
+        void InterfaceMethod();
+    }
+        interface I2{
+        void InterfaceMethod();
+    }
+
+    class Program : I1, I2
+    {
+
+        public static void Main(string[] args){
+            Program p = new Program();
+            ((I1)p).InterfaceMethod();
+            ((I2)p).InterfaceMethod();
         }
-    }
-}
-public class Employee
-{
-    public string FirstName = "Rahul ";
-    public string lastName = "Kumar";
+        public void InterfaceMethod()
+        {
+            System.Console.WriteLine("I2 interface method is implimented");
+        }
 
-    public virtual void PrintFullName() { 
-        Console.WriteLine(FirstName+lastName);
-    }
-}
-public class PartTimeEmployee : Employee
-{
-    public override void PrintFullName()
-    {
-        Console.WriteLine(FirstName + lastName+" Part Time");
-    }
-}
-public class FullTime : Employee
-{
-    public override void PrintFullName()
-    {
-        Console.WriteLine(FirstName + lastName+ " Full time");
-    }
-}
+        void I2.InterfaceMethod()
+        {
+            System.Console.WriteLine("I1 Interface Method ");
+        }
 
+        
+    }
+}
