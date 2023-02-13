@@ -1,33 +1,31 @@
 ﻿namespace LearnBasic
 {
-
-
-
-    interface I1{
-        void InterfaceMethod();
-    }
-        interface I2{
-        void InterfaceMethod();
-    }
-
-    class Program : I1, I2
-    {
-
-        public static void Main(string[] args){
-            Program p = new Program();
-            ((I1)p).InterfaceMethod();
-            ((I2)p).InterfaceMethod();
+    class A{
+        public virtual void print(){
+            System.Console.WriteLine("Class A Implimented");
         }
-        public void InterfaceMethod()
+    }
+    class B : A{
+        public override void print()
         {
-            System.Console.WriteLine("I2 interface method is implimented");
+            System.Console.WriteLine("Class B Overrideing Print() method");
+    
         }
-
-        void I2.InterfaceMethod()
-        {
-            System.Console.WriteLine("I1 Interface Method ");
-        }
-
-        
     }
+        class C : A{
+        public override void print()
+        {
+            System.Console.WriteLine("Class C Overrideing Print() method");
+        }
+    }
+    class D : B, C{
+                    // problem with class 
+    }
+    class Program{
+        public static void Main(){
+            D d = new D();
+            d.print();
+        }
+    }
+
 }
