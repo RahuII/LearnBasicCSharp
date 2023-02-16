@@ -2,41 +2,19 @@
 
 namespace LearnBasic
 {
-    public delegate void SimpleDelegate();
-
-    public class Employee
+    class LINQ
     {
-        public int EmployeeId { get; set; }
-        public string Name { get; set; }
-        public string Gender { get; set; }
+        static void Main(string[] args)
+        {
+            int[] numbers = new int[] { 67, 45, 4, 64, 45 };
 
-    }
+            var query = from number in numbers where number > 5 orderby number descending select number;
 
-    public class Company
-    {
-        public static void Main(string[] args)
-        {
-            addNumber(12, 13);
-        }
-        public static void addNumber(int a, int b, [Optional] int c)
-        {
-            System.Console.WriteLine(a + b);
-        }
-        public static void addNumber(int a, int b, params object[] c)
-        {
-            int result = a + b;
-            if (c != null)
+            foreach (var i in query)
             {
-                foreach (int i in c)
-                {
-                    result += i;
-                }
+                System.Console.WriteLine(i);
             }
-
         }
-        // public static void addNumber(int a, int b, [Optional] int c)
-        // {
-        //     System.Console.WriteLine(a + b + c);
-        // }
     }
+    
 }
