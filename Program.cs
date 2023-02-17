@@ -3,43 +3,47 @@ using System.Xml.Linq;
 
 namespace LearnBasic
 {
-    class LINQ
+    public delegate void SumOfNumberCallBack(int sumOfNumber);
+
+    class Program
     {
+        public static void PrintSumOfNumber(int sumOfNumber)
+        {
+            Console.WriteLine("Sum of number is: {0}", sumOfNumber);
+        }
         static void Main(string[] args)
         {
-            string studentsXML = @"<Students>
-                                    <Student> 
-                                        <Name>Rahul></Name>
-                                        <Age>21</Age>
-                                        <University>Marwadi</University>
-                                    </Student>
-                                    <Student> 
-                                        <Name>deep></Name>
-                                        <Age>41</Age>
-                                        <University>GTU</University>
-                                    </Student>
-                                    <Student> 
-                                        <Name>Vipul></Name>
-                                        <Age>65</Age>
-                                        <University>Marwadi</University>
-                                    </Student>
-                                </Students>";
-            XDocument studentsXdoc = new XDocument();
-            studentsXdoc = XDocument.Parse(studentsXML);
-            var students = from student in studentsXdoc.Descendants("Student")
-                           select new
-                           {
-                               Name = student.Element("Name").Value,
-                               Age = student.Element("Age").Value,
-                               University = student.Element("University").Value,
-                           };
+            Console.WriteLine("Please enter the target number: ");
+            int targetNumber = Convert.ToInt32(Console.ReadLine());
+            SumOfNumberCallBack sumOfNumberCallBack = new SumOfNumberCallBack(PrintSumOfNumber);
+            Number number = new Number(targetNumber, sumOfNumberCallBack);
+            Thread T1 = new Thread(new ThreadStart(number.PrintSumOfNumber));
+            T1.Start();
+        }
+    }
+    class Number
+    {
+        int _targetNumber;
+        SumOfNumberCallBack _sumOfNumberCallBack;
 
-            foreach (var student in students)
+        public Number(int target, SumOfNumberCallBack sumOfNumberCallBack)
+        {
+            this._targetNumber = target;
+            this._sumOfNumberCallBack = sumOfNumberCallBack;
+        }
+        public void PrintSumOfNumber()
+        {
+            int sum = 0;
+            for (int i = 1; i <= _targetNumber; i++)
             {
-                System.Console.WriteLine("Student {0} with age {1} from University {2}", student.Name, student.Age, student.University);
+                sum += i;
+            }
+            if (_sumOfNumberCallBack != null)
+            {
+                _sumOfNumberCallBack(sum);
             }
 
         }
-    }
 
+    }
 }
